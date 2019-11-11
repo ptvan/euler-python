@@ -2,6 +2,7 @@
 # There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 # Find the product abc.
 
+# NOTE: this is a direct port of euler-r/euler009.R
 # Here we exploit the fact that a < b < c
 # which in turn means a < (a + b + c) / 3
 # and a < b < (a + b + c) / 2
