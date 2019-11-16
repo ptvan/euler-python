@@ -32,6 +32,8 @@ raw = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 \
 
 m = np.fromstring(raw, dtype=np.int, sep=" ").reshape((20,20))
 
+# unlike R, the i:j syntax for indexing only works *inside* a list/matrix
+# for automatically generating sequences we have to use range()
 
 def horizontal(m):
     return(m[0:m.shape[0], 0:m.shape[1] - 3] *
