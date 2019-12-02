@@ -8,6 +8,8 @@
 # Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
 # Which starting number, under one million, produces the longest chain?
 
+# this version saved the chains so we don't have to grow a list dynamically
+
 has2 = {}
 
 
