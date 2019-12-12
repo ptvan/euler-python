@@ -38,7 +38,7 @@ tens = ["",
 length = 0
 string = ""
 
-for i in range(100, 300):
+for i in range(1, 1000):
     if i < 11:
         string = singles[i-1]
 
