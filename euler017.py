@@ -4,7 +4,8 @@
 # If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
 
 
-singles = ["one",
+singles = ["",
+           "one",
            "two",
            "three",
            "four",
@@ -15,7 +16,8 @@ singles = ["one",
            "nine",
            "ten"]
 
-teens = ["eleven",
+teens = ["ten",
+         "eleven",
          "twelve",
          "thirteen",
          "fourteen",
@@ -38,16 +40,19 @@ tens = ["",
 length = 0
 string = ""
 
-for i in range(1, 1000):
+for i in range(1, 1001):
     if i < 11:
-        string = singles[i-1]
+        string = singles[i]
 
     if 11 <= i < 20:
-        string = teens[i - 11]
+        string = teens[i - 10]
 
-    if 20 <= i < 100:
+    if i == 20:
+        string = "twenty"
+
+    if 21 <= i < 100:
         digits = list(str(i))
-        string = tens[int(digits[0]) - 1] + " " + singles[int(digits[1]) - 1]
+        string = tens[int(digits[0]) - 1] + " " + singles[int(digits[1])]
 
     if i == 100:
         string = "one hundred"
@@ -55,17 +60,16 @@ for i in range(1, 1000):
     if 100 < i < 1000:
         digits = list(str(i))
         if int(digits[1]) == 0:
-            string = singles[int(digits[0]) - 1] + " hundred " + singles[int(digits[2]) - 1]
+            string = singles[int(digits[0])] + " hundred " + singles[int(digits[2])]
         if int(digits[1]) == 1:
-            string = singles[int(digits[0]) - 1] + " hundred " + teens[int(digits[2]) - 1]
+            string = singles[int(digits[0])] + " hundred " + teens[int(digits[2])]
         if int(digits[1]) >= 2:
-            string = singles[int(digits[0]) - 1] + " hundred " + tens[int(digits[1]) - 1] + " " + singles[int(digits[2]) - 1]
+            string = singles[int(digits[0])] + " hundred " + tens[int(digits[1]) - 1] + " " + singles[int(digits[2])]
 
     if i == 1000:
         string = "one thousand"
 
     # print(i, string)
     length = length + len(string)
-
 
 print(length)
