@@ -44,6 +44,6 @@ for line in lines[1:]:
     for i, cell in enumerate(line):
         newrow.append(int(cell) + max(map(int, toprow[max([0, i-1]):min([len(line), i+1])])))
     toprow = newrow
-    print(newrow)
+    # print(newrow)
 
 print(max(newrow))
