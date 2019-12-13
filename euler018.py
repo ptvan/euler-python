@@ -40,8 +40,8 @@ lines = [line.split() for line in raw.split('\n')][1:-1]
 toprow = lines[0]
 
 for line in lines[1:]:
-    newrow=[]
-    for i,cell in enumerate(line):
+    newrow = []
+    for i, cell in enumerate(line):
         newrow.append(int(cell) + max(map(int, toprow[max([0, i-1]):min([len(line), i+1])])))
     toprow = newrow
     print(newrow)
