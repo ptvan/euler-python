@@ -8,7 +8,7 @@
 # Evaluate the sum of all the amicable numbers under 10000.
 
 # more or less a port of the euler021.R, keep using the fact that the first amicable number is 220
-# using a set() since there are no duplicate numbers
+# using a set instead of a list since there are no duplicate numbers
 
 import math
 
