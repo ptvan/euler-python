@@ -22,6 +22,7 @@ def divisors(n):
     divs.discard(n)
     return divs
 
+
 abundant = []
 limit = 28123
 for i in range(1, limit+1):
@@ -39,4 +40,4 @@ for i in range(0, length):
 sums = np.unique(sums)
 sums = sums[sums <= limit]
 
-print(sum(list(range(1,limit+1))) - sum(sums))
+print(sum(list(range(1, limit+1))) - sum(sums))
